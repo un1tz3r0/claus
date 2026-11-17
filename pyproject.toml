@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name = "claus"
+dynamic = ["version"]
+description = "ls -l with cached, AI-generated one-line summaries of text files (via the claude CLI)"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+authors = [{ name = "Victor Condino" }]
+keywords = ["ls", "cli", "claude", "summaries", "llm"]
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Environment :: Console",
+    "Operating System :: POSIX",
+    "Programming Language :: Python :: 3",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+magic = ["python-magic>=0.4.27"]
+rich = ["rich>=13.0"]
+all = ["claus[magic,rich]"]
+
+[project.scripts]
+claus = "claus.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/un1tz3r0/claus"
+Issues = "https://github.com/un1tz3r0/claus/issues"
+
+[dependency-groups]
+dev = ["pytest>=8.0", "pytest-asyncio>=0.24"]
+
+[tool.hatch.version]
+path = "src/claus/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/claus"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"

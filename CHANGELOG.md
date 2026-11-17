@@ -10,6 +10,11 @@ implementation differs from the original request or from `DESIGN.md`, and why.
 ## [Unreleased]
 
 ### Added
+- Packaging: `pyproject.toml` (hatchling, `src/` layout), extras `magic`, `rich`
+  and `all`, a `dev` dependency group (pytest, pytest-asyncio), a `claus` console
+  script, and `uv.lock`.
+- Package skeleton: `claus/__init__.py` (version), `__main__.py`, and a placeholder
+  `cli.py` that supports only `--version`.
 - Project documents: `DESIGN.md`, `TODO.md`, `CHANGELOG.md`, `README.md`,
   `INSTALL.md`, `USAGE.md`, and `LICENSE` (MIT).
 - A git repository and a public GitHub remote.

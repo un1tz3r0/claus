@@ -11,10 +11,10 @@ Section references (§) point to `DESIGN.md`.
 - [x] Create public GitHub repo, push
 
 ## M1 — Skeleton & packaging
-- [ ] `pyproject.toml` (hatchling, src layout, extras `magic`/`rich`/`all`/`dev`, entry point)
-- [ ] `src/claus/__init__.py` (version), `__main__.py`
-- [ ] `.gitignore`, `uv` dev environment, `pytest` config
-- [ ] Logging / `-v` verbosity plumbing
+- [x] `pyproject.toml` (hatchling, src layout, extras `magic`/`rich`/`all`/`dev`, entry point)
+- [x] `src/claus/__init__.py` (version), `__main__.py`
+- [x] `.gitignore`, `uv` dev environment, `pytest` config
+- [ ] Logging / `-v` verbosity plumbing (moved to M8, with the real CLI)
 
 ## M2 — Config & rules (§4)
 - [ ] Built-in defaults incl. privacy rules (§4.4)
